@@ -88,7 +88,7 @@ body, .app {
 }
 
 .search-contacts {
-  width: 100%;
+  width: 95%;
   padding: 20px 20px 20px 60px;
   background-image: url('./icons/search.svg');
   background-repeat: no-repeat;
@@ -100,14 +100,17 @@ body, .app {
 }
 
 .add-contact {
-  display: block;
-  width: 73px;
+  display: inline;
+  color: transparent;
+  padding: 20px 0px 20px 0px;
+  overflow: hidden;
   background: white;
   background-image: url('./icons/person-add.svg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 28px;
-  font-size: 0;
+  background-size: 30px;
+  z-index: 2;
+  font-size: 10;
 }
 
 .showing-contacts {
