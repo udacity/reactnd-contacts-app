@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+//added a little comment to test my version control
 const readFileAsDataURL = (file) =>
   new Promise(resolve => {
     const reader = new FileReader()
