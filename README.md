@@ -19,6 +19,6 @@ Because this is a code-along project and the commits correspond to specific vide
 
 If you feel like there's a major problem, please open an issue to discuss the problem and potential resolution.
 
-## License
+
 
 MIT
