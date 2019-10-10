@@ -6,8 +6,12 @@ Most of the commits in this repository correspond to videos in the program.
 
 ## Project Setup
 
-* clone the Project - `git clone https://github.com/udacity/reactnd-contacts-complete.git`
-* install the dependencies - `npm install`
+- Clone the project - `git clone https://github.com/udacity/reactnd-contacts-complete.git`
+- Install the dependencies - `npm install`
+
+## Backend Server
+
+The backend server for this in-class project can be found [here](https://github.com/udacity/reactnd-contacts-server).
 
 ## Contributing
 
@@ -15,6 +19,6 @@ Because this is a code-along project and the commits correspond to specific vide
 
 If you feel like there's a major problem, please open an issue to discuss the problem and potential resolution.
 
-## Contributing
+
 
 MIT
