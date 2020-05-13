@@ -13,7 +13,8 @@ class App extends Component {
           contacts
         }))
       })
-  }
+    }
+  
 
   removeContact = (contact) => {
     this.setState((currentState) => ({
@@ -21,6 +22,7 @@ class App extends Component {
         return item.id !== contact.id;
       }),
     }));
+    ContactsAPI.remove(contact)
   };
 
   render() {
