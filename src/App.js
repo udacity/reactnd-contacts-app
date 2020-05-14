@@ -1,22 +1,20 @@
 import React, { Component } from "react";
 import ListContacts from "./ListContacts";
-import * as ContactsAPI from './utils/ContactsAPI'
-import CreateContact from './CreateContact'
+import * as ContactsAPI from "./utils/ContactsAPI";
+import CreateContact from "./CreateContact";
 
 class App extends Component {
   state = {
     contacts: [],
-    screen:"list"
-  }
+    screen: "list",
+  };
   componentDidMount() {
-    ContactsAPI.getAll()
-      .then((contacts) => {
-        this.setState(() => ({
-          contacts
-        }))
-      })
-    }
-  
+    ContactsAPI.getAll().then((contacts) => {
+      this.setState(() => ({
+        contacts,
+      }));
+    });
+  }
 
   removeContact = (contact) => {
     this.setState((currentState) => ({
@@ -24,17 +22,24 @@ class App extends Component {
         return item.id !== contact.id;
       }),
     }));
-    ContactsAPI.remove(contact)
+    ContactsAPI.remove(contact);
   };
 
   render() {
     return (
       <div>
-        {this.state.screen === "list" && (<ListContacts
-          deleteContact={this.removeContact}
-          contacts={this.state.contacts}
-        />)}
-        {this.state.screen === "create" && (<CreateContact />)}
+        {this.state.screen === "list" && (
+          <ListContacts
+            deleteContact={this.removeContact}
+            contacts={this.state.contacts}
+            onNavigate={() =>
+              this.setState(() => ({
+                screen: "create",
+              }))
+            }
+          />
+        )}
+        {this.state.screen === "create" && <CreateContact />}
       </div>
     );
   }
