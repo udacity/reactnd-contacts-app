@@ -1,10 +1,14 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
-html, body, .root {
+html,
+body,
+.root {
   height: 100%;
 }
 body {
@@ -13,7 +17,8 @@ body {
   font-family: sans-serif;
   line-height: 1.5;
 }
-body, .app {
+body,
+.app {
   background: #f5f5f5;
 }
 
@@ -23,7 +28,7 @@ body, .app {
   display: block;
   width: 60px;
   height: 60px;
-  background-image: url('./icons/arrow-back.svg');
+  background-image: url("./icons/arrow-back.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 30px;
@@ -45,7 +50,7 @@ body, .app {
   min-width: 60px;
   height: 60px;
   background-color: white;
-  background-image: url('./icons/person.svg');
+  background-image: url("./icons/person.svg");
   background-size: 32px 32px;
   background-position: center;
   background-repeat: no-repeat;
@@ -62,7 +67,6 @@ body, .app {
   border-bottom: 1px solid #ccc;
   outline: 0;
 }
-
 
 .create-contact-details button {
   margin-top: 20px;
@@ -90,7 +94,7 @@ body, .app {
 .search-contacts {
   width: 100%;
   padding: 20px 20px 20px 60px;
-  background-image: url('./icons/search.svg');
+  background-image: url("./icons/search.svg");
   background-repeat: no-repeat;
   background-position: 20px center;
   background-size: 1.2em;
@@ -103,7 +107,7 @@ body, .app {
   display: block;
   width: 73px;
   background: white;
-  background-image: url('./icons/person-add.svg');
+  background-image: url("./icons/person-add.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 28px;
@@ -177,7 +181,7 @@ body, .app {
   width: 32px;
   height: 32px;
   background-color: transparent;
-  background-image: url('./icons/cancel.svg');
+  background-image: url("./icons/cancel.svg");
   background-size: 100% 100%;
   border: 0;
   color: black;
