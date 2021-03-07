@@ -17,4 +17,6 @@ If you feel like there's a major problem, please open an issue to discuss the pr
 
 ## Contributing
 
-MIT
+## Life Cycle Events
+
+[React Life Cycle](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
