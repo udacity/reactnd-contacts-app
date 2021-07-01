@@ -18,15 +18,25 @@ class ListContacts extends Component {
   }
 
   render() {
+    const { query } = this.state
+    const { contacts, onDeleteContact } = this.props
+
+    // sticking the input field onto components state to trigger re-render on input then filter that input to perform working search
+    const showingContacts = query === ''
+      ? contacts
+      : contacts.filter(contact => (
+        contact.name.toLowerCase().includes(query.toLowerCase())
+      ))
+
     return (
       <div className = 'list-contacts'>
-        {JSON.stringify(this.state)}
+        {/* {JSON.stringify(this.state)} */}
         <div className= 'list-contacts-top'>
           <input 
             className='search-contacts'
             type="text" 
             placeholder='Search Contacts'
-            value={this.state.query}
+            value={query}
             onChange={(event)=> {this.updateQuery(event.target.value)}}
             // To recap how user input affects the ListContacts component's own state:
             // 1. The user enters text into the input field.
@@ -36,7 +46,7 @@ class ListContacts extends Component {
           />
         </div>
         <ol className='contacts-list'>
-          {this.props.contacts.map( contact => (
+          {showingContacts.map( contact => (
               (
                 <li key={contact.id} className='contact-list-item'> 
                   <div
@@ -50,7 +60,7 @@ class ListContacts extends Component {
                     <p>{contact.handle}</p>
                   </div>
                   <button 
-                    onClick={() => this.props.onDeleteContact(contact)}
+                    onClick={() => onDeleteContact(contact)}
                     className='contact-remove'>
                     Remove
                   </button>
