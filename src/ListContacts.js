@@ -49,8 +49,8 @@ class ListContacts extends Component {
         {/* When a user is typing into input field aka query, the contacts.length will be different, in other words, we want to know if we're filtering out any contacts, if so, display the bar with showing # out of how many contacts */}
         {/* using logical && for if condition below */}
         {showingContacts.length !== contacts.length && ( // true && ... do something if true
-          <div>
-            TEST
+          <div className='showing-contacts'>
+            <span>Now showing {showingContacts.length} of {contacts.length}</span>
           </div>
         )}
 
