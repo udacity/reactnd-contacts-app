@@ -45,6 +45,15 @@ class ListContacts extends Component {
             // 4. Because its state has changed, the ListContacts component re-renders.            
           />
         </div>
+
+        {/* When a user is typing into input field aka query, the contacts.length will be different, in other words, we want to know if we're filtering out any contacts, if so, display the bar with showing # out of how many contacts */}
+        {/* using logical && for if condition below */}
+        {showingContacts.length !== contacts.length && ( // true && ... do something if true
+          <div>
+            TEST
+          </div>
+        )}
+
         <ol className='contacts-list'>
           {showingContacts.map( contact => (
               (
