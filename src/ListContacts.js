@@ -17,6 +17,10 @@ class ListContacts extends Component {
     }))
   }
 
+  clearQuery = () => {
+    this.updateQuery('')
+  }
+
   render() {
     const { query } = this.state
     const { contacts, onDeleteContact } = this.props
@@ -51,6 +55,7 @@ class ListContacts extends Component {
         {showingContacts.length !== contacts.length && ( // true && ... do something if true
           <div className='showing-contacts'>
             <span>Now showing {showingContacts.length} of {contacts.length}</span>
+            <button onClick={this.clearQuery}>Show All</button>
           </div>
         )}
 
