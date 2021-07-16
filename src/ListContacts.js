@@ -23,7 +23,7 @@ class ListContacts extends Component {
 
   render() {
     const { query } = this.state
-    const { contacts, onDeleteContact } = this.props
+    const { contacts, onDeleteContact, onNavigate } = this.props
 
     // sticking the input field onto components state to trigger re-render on input then filter that input to perform working search
     const showingContacts = query === ''
@@ -48,6 +48,11 @@ class ListContacts extends Component {
             // 3. updateQuery() then calls setState(), merging in the new state to update the component's internal state.
             // 4. Because its state has changed, the ListContacts component re-renders.            
           />
+          <a
+            href='#create'
+            onClick={onNavigate}
+            className='add-contact'
+          >Add contact</a>
         </div>
 
         {/* When a user is typing into input field aka query, the contacts.length will be different, in other words, we want to know if we're filtering out any contacts, if so, display the bar with showing # out of how many contacts */}
