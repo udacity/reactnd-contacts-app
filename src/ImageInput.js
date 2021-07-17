@@ -1,3 +1,6 @@
+// ****** NOTES ******
+// The ImageInput component is a custom <input> that dynamically reads and resizes image files before submitting them to the server as data URLs. It also shows a preview of the image. We chose to give this component to you rather than build it ourselves because it contains features related to files and images on the web that aren't crucial to your education in this context. If you're curious, feel free to dive into the code, but know it's not a requirement.
+
 import React from 'react'
 import PropTypes from 'prop-types'
 
